@@ -21,6 +21,39 @@ img {
 h1 {
     margin: 0;
 }
+.breed-select{
+    margin-top: 50px;
+ margin-bottom: 50px;
+     min-width: 150px;
+     padding: 5px;
+     border-radius: 5px;
+     font-size: 20px;
+     background-color: rgb(242, 242, 242);
+     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+ }
+.cat-info {
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    background-color: #8e9fc3;
+    border: 1px solid #0d161b;
+}
+
+.box-img {
+    display: flex;
+    align-items: center;
+}
+
+.box {
+    width: 400px;
+}
+.cat-card{
+    display: none;
+}
 
 .is-hidden {
     position: absolute;
@@ -36,10 +69,7 @@ h1 {
     display: none;
 }
 
-.breed-select {
-    max-width: 400px;
-    margin: auto;
-}
+
 .loader{
     margin-top: 50px;
   color: red;
@@ -81,22 +111,3 @@ h1 {
     }
   } 
 
-.cat-info {
-    margin-top: 20px;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-    background-color: #8e9fc3;
-    border: 1px solid #0d161b;
-}
-
-.box-img {
-    display: flex;
-    align-items: center;
-}
-
-.box {
-    width: 400px;
-}

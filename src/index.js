@@ -10,22 +10,28 @@ const ref = {
     loader: document.querySelector('.loader'),
     error: document.querySelector('.error'),
 };
+
 const { selector, divCatInfo, loader, error } = ref;
 
 loader.classList.replace('loader', 'is-hidden');
 error.classList.add('is-hidden');
 divCatInfo.classList.add('is-hidden');
 
-let arrBreedsId = [];
+const selectPlaceholder = `<option class="js-selectOption js-placeholder-select" value="choose">Select the cat</option>`;
+selector.insertAdjacentHTML("afterbegin", selectPlaceholder);
+// let arrBreedsId = [];
+
+function markupSelect(arr) {
+    return arr.map(({name, id}) => {
+     return `<option class="js-selectOption" value="${id}">${name}</option>`
+    }).join("");
+ }
+
+
+
 fetchBreeds()
 .then(data => {
-    data.forEach(element => {
-        arrBreedsId.push({text: element.name, value: element.id});
-    });
-    new SlimSelect({
-        select: selector,
-        data: arrBreedsId
-    });
+    selector.insertAdjacentHTML("beforeend", markupSelect(data));
     })
 .catch(onFetchError);
 

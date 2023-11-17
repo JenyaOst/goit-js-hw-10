@@ -1,7 +1,6 @@
 import { fetchBreeds, fetchCatByBreed } from "./cat-api";
 import './styles.css';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import SlimSelect from 'slim-select'
 import 'slim-select/dist/slimselect.css';
 
 const ref = {
@@ -19,7 +18,6 @@ divCatInfo.classList.add('is-hidden');
 
 const selectPlaceholder = `<option class="js-selectOption js-placeholder-select" value="choose">Select the cat</option>`;
 selector.insertAdjacentHTML("afterbegin", selectPlaceholder);
-// let arrBreedsId = [];
 
 function markupSelect(arr) {
     return arr.map(({name, id}) => {
